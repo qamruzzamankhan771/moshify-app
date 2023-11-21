@@ -5,6 +5,11 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 html {
   font-size: 62.5%;
 }
@@ -131,35 +136,101 @@ a {
   padding-left: 3rem;
 }
 
-.list--tick .list__item{
-    padding-left: 0.5rem;
-    margin-bottom: 1rem;
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 1024px){
-    .list--tick .list__item{
-        padding-left: 0;
-    }
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+  }
 }
-
 
 /* Icons */
 
-.icon{
-    height: 40px;
-    width: 40px;
+.icon {
+  height: 40px;
+  width: 40px;
 }
 
-.icon--primary{
-    fill: var(--color-primary);
+.icon--primary {
+  fill: var(--color-primary);
 }
 
-.icon-container{
-    background: #f3faf9;
-    width: 60px;
-    height: 60px;
-    border-radius: 100%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+.icon-container {
+  background: #f3faf9;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* Buttons */
+
+.btn {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--color-headings);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: #004eb5;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #ffffff;
+}
+
+.btn--secondary:hover {
+  background: #019fbb;
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.btn--accent:hover {
+  background: #cd2900;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn--outlined {
+  border: 1px solid var(--color-headings);
+  color: var(--color-headings);
+}
+.btn--outlined:hover {
+  background: var(--color-headings);
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Inputs */
+
